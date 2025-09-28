@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import manicureImage from '../assets/images/pexels-photo-4677849.webp';
+import pedicureImage from '../assets/images/pedicure-spa-salon-24495476.webp';
+import massageImage from '../assets/images/360_F_93554369_ua12Lwh68f82aJunZeXvhB8R3AVMYj9I.jpg';
 
 // Swiper stílusok
 import 'swiper/css';
@@ -7,7 +10,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
 
-const Hero = ({ services }) => {
+const services = [
+  { title: 'Manikűr', image: manicureImage },
+  { title: 'Pedikűr', image: pedicureImage },
+  { title: 'Masszázs', image: massageImage },
+];
+
+const Hero: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -31,7 +40,7 @@ const Hero = ({ services }) => {
           slidesPerView={1}
           loop={true}
           pagination={{ clickable: true }}
-          
+
           autoplay={{ delay: 4000 }}
           className="h-full"
         >
@@ -75,17 +84,19 @@ const Hero = ({ services }) => {
             className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg"
           />
 
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-pink-500 text-2xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:translate-y-[-20px]">
-            {service.title}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-pink-500 text-4xl transition-all duration-300 ease-in-out group-hover:translate-y-[-20px]">
+            <p className=' text-outline'>
+              {service.title}
+            </p>
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-xs opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
-            <p className="relative inline-block text-pink-100 group-hover:text-pink-100 transition duration-600
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-sm opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+            <p className=" text-outline relative inline-block text-pink-100 group-hover:text-pink-100 transition duration-600
                               after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px]
                               after:w-0 group-hover:after:w-full after:bg-pink-600 after:transition-all after:duration-600">
               Részletek
             </p>
           </div>
-        </div>
+        </div> 
       ))}
     </div>
   );

@@ -12,7 +12,6 @@ function App() {
       <main className="pt-[60px]">
         <Routes>
           <Route path="/" element={<Home />} />
-
         </Routes>
       </main>
     </Router>
