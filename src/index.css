@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Atacama VAR;
+  src: url("assets/font/AtacamaVAR-VF.woff2");
+}
+
+:root {
+  --bg-color: #fff9f9;
+  --swiper-scrollbar-bg-color: pink;
+  --swiper-scrollbar-drag-bg-color: oklch(71.8% 0.202 349.761)
+}
+
+* {
+  scroll-behavior: smooth;
+
+  font-family: Atacama VAR, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
