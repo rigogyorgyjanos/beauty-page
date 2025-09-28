@@ -210,7 +210,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
         <div className="fixed inset-0 z-50 flex justify-center items-center px-4">
             <div
                 onClick={onClose}
-                className={`absolute inset-0 bg-black transition-all duration-300 ${visible ? 'bg-opacity-40 backdrop-blur-sm' : 'bg-opacity-0 backdrop-blur-0'
+                className={`absolute inset-0  transition-all duration-300 ${visible ? 'bg-opacity-40 backdrop-blur-xl' : 'bg-opacity-0 backdrop-blur-0'
                     }`}
             />
             <div
