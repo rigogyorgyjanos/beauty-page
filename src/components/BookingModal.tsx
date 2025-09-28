@@ -248,7 +248,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                                 <img
                                     src={member.photo}
                                     alt={member.name}
-                                    className="w-8 h-8 rounded-full object-cover"
+                                    className="w-8 h-8 rounded-full object-cover object-top"
                                 />
                                 <div>
                                     <p className="font-semibold">{member.name}</p>
